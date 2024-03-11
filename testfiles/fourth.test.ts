@@ -16,7 +16,7 @@ const users: ExtendedUser[] = [
   { name: "Selma", role: "regular", birthdayMonth: "november" },
 ];
 
-test("", () => {
+test("returns object with months as keys, users with key as birthdaymonth as value ", () => {
   expect(fourth(users)).toStrictEqual({
     january: ["Sonja", "Tim"],
     june: ["Proffen", "Tom", "Trond"],
