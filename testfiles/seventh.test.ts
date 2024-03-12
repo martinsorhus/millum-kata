@@ -2,6 +2,7 @@ import { expect, test } from "@jest/globals";
 import { seventh } from "../katas/seventh";
 
 const items = [
+  "o90",
   "a2",
   "a90",
   "i98",
@@ -14,6 +15,7 @@ const items = [
   "a76",
   "a1",
   "i65",
+  "o9012",
   "h43",
   "k37",
   "o767",
@@ -29,7 +31,9 @@ test("returns array in correct order", () => {
     "t4",
     "t89",
     "o8",
+    "o90",
     "o767",
+    "o9012",
     "k37",
     "k99",
     "j12",
