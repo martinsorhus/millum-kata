@@ -20,11 +20,11 @@ const users: User[] = [
 
 test("function returns list of users with name values higher than 56", () => {
   expect(sixth(users)).toStrictEqual([
-    { name: "Huldra", role: "regular" },
-    { name: "Proffen", role: "regular" },
-    { name: "Sonja", role: "admin" },
     { name: "Sunny", role: "regular" },
-    { name: "Trond", role: "regular" },
+    { name: "Proffen", role: "regular" },
     { name: "Winona", role: "admin" },
+    { name: "Trond", role: "regular" },
+    { name: "Huldra", role: "regular" },
+    { name: "Sonja", role: "admin" },
   ]);
 });

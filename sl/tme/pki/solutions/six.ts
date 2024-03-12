@@ -1,4 +1,4 @@
-import { User } from "../interfaces/user.interface";
+import { User } from "../../../../interfaces/user.interface";
 
 /**
  * Implement a function that takes in an array of users as parameters
@@ -72,7 +72,9 @@ export const sixth = (users: User[]) => {
     if (val > 56) return u;
     return;
   });
-  return userWithLongNames.sort((a, b) => a.name.localeCompare(b.name));
+  return userWithLongNames.sort(
+    (a, b) => calculateNameValue(b.name) - calculateNameValue(a.name)
+  );
 };
 
 const calculateNameValue = (name: string) => {
