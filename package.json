@@ -11,6 +11,7 @@
     "test-fifth": "jest ./testfiles/fifth.test.ts --watch",
     "test-sixth": "jest ./testfiles/sixth.test.ts --watch",
     "test-seventh": "jest ./testfiles/seventh.test.ts --watch",
+    "test-eighth": "jest ./testfiles/eighth.test.ts --watch",
     "test": "jest"
   },
   "author": "",
