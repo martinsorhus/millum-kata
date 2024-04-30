@@ -190,7 +190,6 @@ describe("testing function with users 4 ( empty list )", () => {
         .localeCompare(b[0].name.toLocaleLowerCase(locales)[0], locales)
     );
     expect(a).toEqual(b);
-    expect(a.length).toBeGreaterThanOrEqual(1);
   });
 
   test("returns array of arrays with all superadmins in the subarray at position -1", () => {
