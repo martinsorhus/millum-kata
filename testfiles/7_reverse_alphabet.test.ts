@@ -1,5 +1,5 @@
 import { expect, test } from "@jest/globals";
-import { seventh } from "../katas/seventh";
+import { seventh } from "../katas/7_reverse_alphabet";
 
 const items = [
   "o90",

@@ -1,6 +1,6 @@
 import { expect, test, describe } from "@jest/globals";
 import { User } from "../interfaces/user.interface";
-import { eighth } from "../katas/eighth";
+import { eighth } from "../katas/8_userlist";
 
 const locales = ["nb-NO", "da-DK", "sv-SE"];
 
