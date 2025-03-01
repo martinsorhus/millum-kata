@@ -1,5 +1,5 @@
 import { expect, test } from "@jest/globals";
-import { fourth } from "../katas/fourth";
+import { fourth } from "../katas/4_months";
 import { ExtendedUser } from "../interfaces/extended-user.interface";
 
 const users: ExtendedUser[] = [
