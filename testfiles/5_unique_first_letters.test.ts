@@ -1,6 +1,6 @@
 import { expect, test } from "@jest/globals";
 import { User } from "../interfaces/user.interface";
-import { fifth } from "../katas/fifth";
+import { fifth } from "../katas/5_unique_first_letters";
 
 const users: User[] = [
   { name: "Egil", role: "admin" },
