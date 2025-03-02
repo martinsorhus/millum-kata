@@ -16,12 +16,12 @@ npm i
 
 Finn kataene i mappen /katas
 
-Filnavnene heter <tall>\_navn.ts
+Filnavnene heter tall_oppgavenavn.ts
 Dette for å gi en slags rekkefølge
 
 For å teste din implementasjon, start testene for din valgte kata på kommandolinjen
 
-scriptene for å teste filene heter test:<oppgavenavn>
+scriptene for å teste filene heter test:oppgavenavn
 
 Skal du prøve deg på for eksempel 1_filter_users vil du kjøre scriptet
 
