@@ -12,7 +12,7 @@ import {
   quarterlyStocktakingsOutput,
 } from "../testdata/fillgaps";
 
-describe("testing with montlhy period type", () => {
+describe("testing with monthly period type", () => {
   test("expected length", () => {
     const a = fill_the_gaps(monthlyStocktakings, PeriodType.MONTHLY);
     expect(a).toHaveLength(17);

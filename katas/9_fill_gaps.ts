@@ -2,7 +2,9 @@
  * Fill the gaps
  *
  * Implement a function that fills the gaps in an array of stocktaking objects
- * By gaps, we mean the periods that are missing
+ * By gaps, we mean the periods that are missing in between the items in the array
+ * Note that you should not add anything before the first item or after the last item in the existing array
+ * 
  *
  * A stocktaking item is like this
  *  period: number;
