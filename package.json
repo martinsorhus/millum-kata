@@ -1,6 +1,6 @@
 {
   "name": "teknisk_stund_kata",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,9 @@
     "test:username-value": "jest ./testfiles/6_username_value.test.ts --watch",
     "test:reverse-alphabet": "jest ./testfiles/7_reverse_alphabet.test.ts --watch",
     "test:userlist": "jest ./testfiles/8_userlist.test.ts --watch",
-    "test-nineth": "jest ./testfiles/nineth.test.ts --watch",
-    "test-tenth": "jest ./testfiles/tenth.test.ts --watch",
+    "test:fill-gaps": "jest ./testfiles/9_fill_gaps.test.ts --watch",
+    "test:version": "jest ./testfiles/10_version.test.ts --watch",
+    "test:letter-count": "jest ./testfiles/11_letter_count.test.ts --watch",
     "test": "jest"
   },
   "author": "",
