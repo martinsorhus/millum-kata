@@ -17,18 +17,18 @@
 
     EXAMPLE INPUT
     [
-      { id: '234-aef', period: 11, year: 2022 }, 
-      { id: '234-aef', period: 2, year: 2023 }
+      Stocktaking({ id: '234-aef', period: 11, year: 2022 }), 
+      Stocktaking({ id: '234-aef', period: 2, year: 2023 })
     ], PeriodType.MONTHLY
 
     Here we see that the period for december and january are missing, since those periods are not in the array - and we know that the period type is MONTHLY
 
     Correct output from your function would be
     [
-      { id: '234-aef', period: 11, year: 2022 }, 
-      { id: '234-aef', period: 12, year: 2022 }, 
-      { id: '234-aef', period: 1, year: 2023 }, 
-      { id: '234-aef', period: 2, year: 2023 }
+      Stocktaking({ id: '234-aef', period: 11, year: 2022 }), 
+      Stocktaking({ id: '234-aef', period: 12, year: 2022 }), 
+      Stocktaking({ id: '234-aef', period: 1, year: 2023 }), 
+      Stocktaking({ id: '234-aef', period: 2, year: 2023 })
     ]
  */
 
