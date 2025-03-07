@@ -14,48 +14,48 @@ import {
 
 describe("testing with monthly period type", () => {
   test("expected length", () => {
-    const a = fill_the_gaps(monthlyStocktakings, PeriodType.MONTHLY);
+    const a = fill_the_gaps([...monthlyStocktakings], PeriodType.MONTHLY);
     expect(a).toHaveLength(17);
   });
 
   test("correct output", () => {
-    const a = fill_the_gaps(monthlyStocktakings, PeriodType.MONTHLY);
+    const a = fill_the_gaps([...monthlyStocktakings], PeriodType.MONTHLY);
     expect(a).toStrictEqual(monthlyStocktakingsOutput);
   });
 });
 
 describe("testing with weekly period type", () => {
   test("expected length", () => {
-    const a = fill_the_gaps(weeklyStocktakings, PeriodType.WEEKLY);
+    const a = fill_the_gaps([...weeklyStocktakings], PeriodType.WEEKLY);
     expect(a).toHaveLength(17);
   });
 
   test("correct output", () => {
-    const a = fill_the_gaps(weeklyStocktakings, PeriodType.WEEKLY);
+    const a = fill_the_gaps([...weeklyStocktakings], PeriodType.WEEKLY);
     expect(a).toStrictEqual(weeklyStocktakingsOutput);
   });
 });
 
 describe("testing with yearly period type", () => {
   test("expected length", () => {
-    const a = fill_the_gaps(yearlyStocktakings, PeriodType.YEARLY);
+    const a = fill_the_gaps([...yearlyStocktakings], PeriodType.YEARLY);
     expect(a).toHaveLength(9);
   });
 
   test("correct output", () => {
-    const a = fill_the_gaps(yearlyStocktakings, PeriodType.YEARLY);
+    const a = fill_the_gaps([...yearlyStocktakings], PeriodType.YEARLY);
     expect(a).toStrictEqual(yearlyStocktakingsOutput);
   });
 });
 
 describe("testing with quarterly period type", () => {
   test("expected length", () => {
-    const a = fill_the_gaps(quarterlyStocktakings, PeriodType.QUARTERLY);
+    const a = fill_the_gaps([...quarterlyStocktakings], PeriodType.QUARTERLY);
     expect(a).toHaveLength(12);
   });
 
   test("correct output", () => {
-    const a = fill_the_gaps(quarterlyStocktakings, PeriodType.QUARTERLY);
+    const a = fill_the_gaps([...quarterlyStocktakings], PeriodType.QUARTERLY);
     expect(a).toStrictEqual(quarterlyStocktakingsOutput);
   });
 });
