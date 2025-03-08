@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@testdata/*": ["testdata/*"],
+            "@models": ["models"],
+            "@katas": ["katas"],
+            "@interfaces": ["interfaces"],
+            "@types": ["types"]
+        }
+    }
+}
