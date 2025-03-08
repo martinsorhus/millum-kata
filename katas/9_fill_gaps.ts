@@ -32,11 +32,11 @@
     ]
  */
 
-import { Stocktaking, PeriodType } from "../models";
+import { Stocktaking, PeriodType } from '../models';
 
 export const fill_the_gaps = (
-  stocktakings: Stocktaking[],
-  periodType: PeriodType
+    stocktakings: Stocktaking[],
+    periodType: PeriodType
 ): Stocktaking[] => {
-  return stocktakings;
+    return stocktakings;
 };

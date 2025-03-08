@@ -11,5 +11,5 @@
  */
 
 export const seventh = (items: string[]) => {
-  return items;
+    return items;
 };

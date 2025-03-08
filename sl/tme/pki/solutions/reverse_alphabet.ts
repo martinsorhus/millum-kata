@@ -12,13 +12,13 @@
  */
 
 export const seventh = (items: string[]) => {
-  return items.sort((a, b) => {
-    const letterA = a[0];
-    const letterB = b[0];
-    const numA = parseInt(a.slice(1));
-    const numB = parseInt(b.slice(1));
+    return items.sort((a, b) => {
+        const letterA = a[0];
+        const letterB = b[0];
+        const numA = parseInt(a.slice(1));
+        const numB = parseInt(b.slice(1));
 
-    if (letterA === letterB) return numA - numB;
-    else return letterB.localeCompare(letterA);
-  });
+        if (letterA === letterB) return numA - numB;
+        else return letterB.localeCompare(letterA);
+    });
 };

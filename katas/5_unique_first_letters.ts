@@ -7,9 +7,9 @@
  *
  */
 
-import { User } from "../interfaces/user.interface";
+import { User } from '../interfaces/user.interface';
 
 export const fifth = (users: User[]) => {
-  let obj = {};
-  return obj;
+    let obj = {};
+    return obj;
 };

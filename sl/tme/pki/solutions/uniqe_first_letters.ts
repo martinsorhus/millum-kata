@@ -7,19 +7,19 @@
  *
  */
 
-import { User } from "../../../../interfaces/user.interface";
+import { User } from '../../../../interfaces/user.interface';
 
 export const fifth = (users: User[]) => {
-  let obj = {};
-  users.forEach((u) => {
-    if (Object.keys(obj).includes(u.name[0].toLowerCase())) {
-      obj[u.name[0].toLowerCase()] = [
-        ...obj[u.name[0].toLowerCase()],
-        u.name.toUpperCase(),
-      ].sort((a, b) => b.localeCompare(a));
-    } else {
-      obj[u.name[0].toLowerCase()] = [u.name.toUpperCase()];
-    }
-  });
-  return obj;
+    let obj = {};
+    users.forEach((u) => {
+        if (Object.keys(obj).includes(u.name[0].toLowerCase())) {
+            obj[u.name[0].toLowerCase()] = [
+                ...obj[u.name[0].toLowerCase()],
+                u.name.toUpperCase()
+            ].sort((a, b) => b.localeCompare(a));
+        } else {
+            obj[u.name[0].toLowerCase()] = [u.name.toUpperCase()];
+        }
+    });
+    return obj;
 };

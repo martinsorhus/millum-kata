@@ -33,31 +33,31 @@
  * - Input can contain only superadmins
  */
 
-import { User } from "../../../../interfaces/user.interface";
+import { User } from '../../../../interfaces/user.interface';
 
 export const eighth = (users: User[]) => {
-  const locales = ["nb-NO", "da-DK", "sv-SE"];
-  let u: User[][] = [];
-  const superAdmins: User[] = [];
-  const addItem = (user: User) => {
-    const idx = u.findIndex(
-      (ur) =>
-        ur.length &&
-        ur[0].name
-          .toLocaleLowerCase(locales)
-          .startsWith(user.name[0].toLocaleLowerCase(locales))
-    );
-    idx > -1 ? u[idx].push(user) : u.push([user]);
-  };
-  users.forEach((us) => {
-    us.role === "superadmin" ? superAdmins.push(us) : addItem(us);
-  });
-  return [
-    ...u.sort((a, b) =>
-      a[0].name[0]
-        .toLocaleLowerCase()
-        .localeCompare(b[0].name[0].toLocaleLowerCase(locales), locales)
-    ),
-    superAdmins,
-  ].map((d) => d.sort((a, b) => b.id! - a.id!));
+    const locales = ['nb-NO', 'da-DK', 'sv-SE'];
+    let u: User[][] = [];
+    const superAdmins: User[] = [];
+    const addItem = (user: User) => {
+        const idx = u.findIndex(
+            (ur) =>
+                ur.length &&
+                ur[0].name
+                    .toLocaleLowerCase(locales)
+                    .startsWith(user.name[0].toLocaleLowerCase(locales))
+        );
+        idx > -1 ? u[idx].push(user) : u.push([user]);
+    };
+    users.forEach((us) => {
+        us.role === 'superadmin' ? superAdmins.push(us) : addItem(us);
+    });
+    return [
+        ...u.sort((a, b) =>
+            a[0].name[0]
+                .toLocaleLowerCase()
+                .localeCompare(b[0].name[0].toLocaleLowerCase(locales), locales)
+        ),
+        superAdmins
+    ].map((d) => d.sort((a, b) => b.id! - a.id!));
 };

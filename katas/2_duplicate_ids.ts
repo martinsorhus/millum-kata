@@ -6,8 +6,8 @@
  *   Return the updated first array
  */
 
-import { User } from "../interfaces/user.interface";
+import { User } from '../interfaces/user.interface';
 
 export const second = (users1: User[], users2: User[]) => {
-  return [];
+    return [];
 };
