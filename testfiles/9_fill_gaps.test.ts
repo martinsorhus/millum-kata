@@ -1,6 +1,6 @@
 import { expect, test, describe } from '@jest/globals';
-import { fill_the_gaps } from '../katas/9_fill_gaps';
-import { PeriodType } from '../models';
+import { fillGaps } from '@katas';
+import { PeriodType } from '@models';
 import {
     monthlyStocktakings,
     monthlyStocktakingsOutput,
@@ -10,52 +10,52 @@ import {
     yearlyStocktakingsOutput,
     quarterlyStocktakings,
     quarterlyStocktakingsOutput
-} from '../testdata/fillgaps';
+} from '@testdata/fillgaps';
 
 describe('testing with monthly period type', () => {
     test('expected length', () => {
-        const a = fill_the_gaps([...monthlyStocktakings], PeriodType.MONTHLY);
+        const a = fillGaps([...monthlyStocktakings], PeriodType.MONTHLY);
         expect(a).toHaveLength(17);
     });
 
     test('correct output', () => {
-        const a = fill_the_gaps([...monthlyStocktakings], PeriodType.MONTHLY);
+        const a = fillGaps([...monthlyStocktakings], PeriodType.MONTHLY);
         expect(a).toStrictEqual(monthlyStocktakingsOutput);
     });
 });
 
 describe('testing with weekly period type', () => {
     test('expected length', () => {
-        const a = fill_the_gaps([...weeklyStocktakings], PeriodType.WEEKLY);
+        const a = fillGaps([...weeklyStocktakings], PeriodType.WEEKLY);
         expect(a).toHaveLength(17);
     });
 
     test('correct output', () => {
-        const a = fill_the_gaps([...weeklyStocktakings], PeriodType.WEEKLY);
+        const a = fillGaps([...weeklyStocktakings], PeriodType.WEEKLY);
         expect(a).toStrictEqual(weeklyStocktakingsOutput);
     });
 });
 
 describe('testing with yearly period type', () => {
     test('expected length', () => {
-        const a = fill_the_gaps([...yearlyStocktakings], PeriodType.YEARLY);
+        const a = fillGaps([...yearlyStocktakings], PeriodType.YEARLY);
         expect(a).toHaveLength(9);
     });
 
     test('correct output', () => {
-        const a = fill_the_gaps([...yearlyStocktakings], PeriodType.YEARLY);
+        const a = fillGaps([...yearlyStocktakings], PeriodType.YEARLY);
         expect(a).toStrictEqual(yearlyStocktakingsOutput);
     });
 });
 
 describe('testing with quarterly period type', () => {
     test('expected length', () => {
-        const a = fill_the_gaps([...quarterlyStocktakings], PeriodType.QUARTERLY);
+        const a = fillGaps([...quarterlyStocktakings], PeriodType.QUARTERLY);
         expect(a).toHaveLength(12);
     });
 
     test('correct output', () => {
-        const a = fill_the_gaps([...quarterlyStocktakings], PeriodType.QUARTERLY);
+        const a = fillGaps([...quarterlyStocktakings], PeriodType.QUARTERLY);
         expect(a).toStrictEqual(quarterlyStocktakingsOutput);
     });
 });

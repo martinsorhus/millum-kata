@@ -1,4 +1,4 @@
-import { Stocktaking } from '../models';
+import { Stocktaking } from '@models';
 
 const monthlyStocktakings = [
     new Stocktaking({

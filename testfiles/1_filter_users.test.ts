@@ -1,6 +1,6 @@
-import { first } from '../katas/1_filter_users';
+import { filterUsers } from '@katas';
 import { expect, test } from '@jest/globals';
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 
 const users: User[] = [
     { name: 'Magne', role: 'regular', id: 1 },
@@ -15,7 +15,7 @@ const users: User[] = [
 ];
 
 test('returns correct length', () => {
-    expect(first(users)).toHaveLength(7);
+    expect(filterUsers(users)).toHaveLength(7);
 });
 
 test('filters out all users with no id', () => {
@@ -25,34 +25,34 @@ test('filters out all users with no id', () => {
         { name: 'Eirik', role: 'superadmin' },
         { name: 'Stian', role: 'admin' }
     ];
-    expect(first([...users, ...additionalUsers])).not.toContain({
+    expect(filterUsers([...users, ...additionalUsers])).not.toContain({
         name: 'Johnny',
         role: 'regular'
     });
-    expect(first([...users, ...additionalUsers])).not.toContain({
+    expect(filterUsers([...users, ...additionalUsers])).not.toContain({
         name: 'OnkelP',
         role: 'regular'
     });
-    expect(first([...users, ...additionalUsers])).not.toContain({
+    expect(filterUsers([...users, ...additionalUsers])).not.toContain({
         name: 'Eirik',
         role: 'superadmin'
     });
-    expect(first([...users, ...additionalUsers])).not.toContain({
+    expect(filterUsers([...users, ...additionalUsers])).not.toContain({
         name: 'Stian',
         role: 'admin'
     });
-    expect(first([...users, ...additionalUsers])).not.toContain({
+    expect(filterUsers([...users, ...additionalUsers])).not.toContain({
         name: 'Egil',
         role: 'regular'
     });
-    expect(first([...users, ...additionalUsers])).not.toContain({
+    expect(filterUsers([...users, ...additionalUsers])).not.toContain({
         name: 'Andrea',
         role: 'superadmin'
     });
 });
 
 test('return users in correct order', () => {
-    expect(first(users)).toStrictEqual([
+    expect(filterUsers(users)).toStrictEqual([
         { name: 'Per', role: 'superadmin', id: 7 },
         { name: 'Seline', role: 'superadmin', id: 5 },
         { name: 'Gro', role: 'regular', id: 4 },

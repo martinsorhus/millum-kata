@@ -1,8 +1,8 @@
 export type VersionData = {
-  activeVersion: boolean;
-  versionCode: string;
-  mandatory: boolean;
-  published: Date;
+    activeVersion: boolean;
+    versionCode: string;
+    mandatory: boolean;
+    published: Date;
 };
 
-export type UpdateResponse = "Mandatory" | "Available" | "Unavailable";
+export type UpdateResponse = 'Mandatory' | 'Available' | 'Unavailable';

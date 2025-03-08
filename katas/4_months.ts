@@ -1,4 +1,4 @@
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 
 interface ExtendedUser extends User {
     birthdayMonth: string;
@@ -26,7 +26,7 @@ const months = [
     'december'
 ];
 
-export const fourth = (users: ExtendedUser[]) => {
+export const birthdayMonths = (users: ExtendedUser[]) => {
     let obj = {
         unsupported: []
     };

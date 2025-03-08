@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { User } from '../interfaces/user.interface';
-import { fifth } from '../katas/5_unique_first_letters';
+import { User } from '@interfaces';
+import { uniqueFirstLetters } from '@katas';
 
 const users: User[] = [
     { name: 'Egil', role: 'admin' },
@@ -19,7 +19,7 @@ const users: User[] = [
 ];
 
 test('returns object with unique lowercase first letters of users as keys, capitalized names of users with key as first letter in name as value ', () => {
-    expect(fifth(users)).toStrictEqual({
+    expect(uniqueFirstLetters(users)).toStrictEqual({
         e: ['ERIKA', 'EGIL', 'EDVIN'],
         t: ['TROND', 'TOM', 'TIM'],
         s: ['SUNNY', 'SONJA', 'SELMA'],

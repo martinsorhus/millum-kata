@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { User } from '../interfaces/user.interface';
-import { sixth } from '../katas/6_username_value';
+import { User } from '@interfaces';
+import { usernameValue } from '@katas';
 
 const users: User[] = [
     { name: 'Egil', role: 'admin' },
@@ -19,7 +19,7 @@ const users: User[] = [
 ];
 
 test('function returns list of users with name values higher than 56', () => {
-    expect(sixth(users)).toStrictEqual([
+    expect(usernameValue(users)).toStrictEqual([
         { name: 'Sunny', role: 'regular' },
         { name: 'Proffen', role: 'regular' },
         { name: 'Winona', role: 'admin' },

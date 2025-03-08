@@ -33,9 +33,9 @@
  * - Input can contain only superadmins
  */
 
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 type nestedUserArray = User[][];
 
-export const eighth = (users: User[]): nestedUserArray => {
+export const userList = (users: User[]): nestedUserArray => {
     return [];
 };

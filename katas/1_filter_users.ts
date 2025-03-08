@@ -1,4 +1,4 @@
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 
 /*  Write a function that takes in an array of users
  *   The function should filter out the users with no userid,
@@ -8,6 +8,6 @@ import { User } from '../interfaces/user.interface';
  *   return the updated array
  */
 
-export const first = (users: User[]) => {
+export const filterUsers = (users: User[]) => {
     return [];
 };

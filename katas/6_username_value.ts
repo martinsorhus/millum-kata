@@ -1,4 +1,4 @@
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 
 /**
  * Implement a function that takes in an array of users as parameters
@@ -66,7 +66,7 @@ const letterValues = {
     Z: 26
 };
 
-export const sixth = (users: User[]) => {
+export const usernameValue = (users: User[]) => {
     let userWithLongNames = [];
     return userWithLongNames;
 };

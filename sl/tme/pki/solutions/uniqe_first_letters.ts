@@ -7,9 +7,9 @@
  *
  */
 
-import { User } from '../../../../interfaces/user.interface';
+import { User } from '@interfaces';
 
-export const fifth = (users: User[]) => {
+export const uniqueFirstLetters = (users: User[]) => {
     let obj = {};
     users.forEach((u) => {
         if (Object.keys(obj).includes(u.name[0].toLowerCase())) {

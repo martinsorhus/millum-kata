@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { fourth } from '../katas/4_months';
-import { ExtendedUser } from '../interfaces/extended-user.interface';
+import { birthdayMonths } from '@katas';
+import { ExtendedUser } from '@interfaces';
 
 const users: ExtendedUser[] = [
     { name: 'Egil', role: 'admin', birthdayMonth: 'december' },
@@ -19,7 +19,7 @@ const users: ExtendedUser[] = [
 ];
 
 test('returns object with months as keys, users with key as birthdaymonth as value ', () => {
-    expect(fourth(users)).toStrictEqual({
+    expect(birthdayMonths(users)).toStrictEqual({
         january: ['Sonja', 'Tim'],
         june: ['Proffen', 'Tom', 'Trond'],
         july: ['Huldra'],

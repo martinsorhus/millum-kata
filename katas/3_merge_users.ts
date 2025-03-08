@@ -1,4 +1,4 @@
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 
 /**
  * Write a function that merges two arrays of users
@@ -13,6 +13,6 @@ import { User } from '../interfaces/user.interface';
  *
  */
 
-export const third = (users1: User[], users2: User[]) => {
+export const mergeUsers = (users1: User[], users2: User[]) => {
     return [];
 };

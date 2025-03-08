@@ -1,4 +1,4 @@
-import { ExtendedUser } from '../../../../interfaces/extended-user.interface';
+import { ExtendedUser } from '@interfaces';
 
 const months = [
     'january',
@@ -15,7 +15,7 @@ const months = [
     'december'
 ];
 
-export const fourth = (users: ExtendedUser[]) => {
+export const birthdayMonths = (users: ExtendedUser[]) => {
     let obj = {
         unsupported: []
     };

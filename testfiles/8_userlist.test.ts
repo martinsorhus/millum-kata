@@ -1,6 +1,6 @@
 import { expect, test, describe } from '@jest/globals';
-import { User } from '../interfaces/user.interface';
-import { eighth } from '../katas/8_userlist';
+import { User } from '@interfaces';
+import { userList } from '@katas';
 
 const locales = ['nb-NO', 'da-DK', 'sv-SE'];
 
@@ -60,12 +60,12 @@ const users5: User[] = [
 
 describe('testing function with users 1', () => {
     test('returns array of arrays', () => {
-        const a = eighth(users1);
+        const a = userList(users1);
         expect(a).toHaveLength(8);
     });
 
     test('alphabetical sorting takes locale into account ', () => {
-        const a = eighth(users1).filter((us) => us[0].role !== 'superadmin');
+        const a = userList(users1).filter((us) => us[0].role !== 'superadmin');
         const b = Array.from(a).sort((a, b) =>
             a[0].name
                 .toLocaleLowerCase(locales)[0]
@@ -76,7 +76,7 @@ describe('testing function with users 1', () => {
     });
 
     test('returns array of arrays with all superadmins in the subarray at position -1', () => {
-        const a = eighth(users1);
+        const a = userList(users1);
         expect(a.at(-1)?.every((us) => us.role === 'superadmin'));
         const b = Array.from(a).reduce(
             (acc, arr) => (arr.some((us) => us.role === 'superadmin') ? acc++ : acc),
@@ -87,7 +87,7 @@ describe('testing function with users 1', () => {
     });
 
     test('all arrays of users are sorted in order of descending id', () => {
-        const a = eighth(users1);
+        const a = userList(users1);
         const b = a.map((c) => (c = c.sort((k, l) => l.id! - k.id!)));
         expect(a).toStrictEqual(b);
         expect(a.length).toBeGreaterThanOrEqual(1);
@@ -96,12 +96,12 @@ describe('testing function with users 1', () => {
 
 describe('testing function with users 2', () => {
     test('returns array of arrays', () => {
-        const a = eighth(users2);
+        const a = userList(users2);
         expect(a).toHaveLength(4);
     });
 
     test('alphabetical sorting takes locale into account ', () => {
-        const a = eighth(users2).filter((us) => us.length && us[0].role !== 'superadmin');
+        const a = userList(users2).filter((us) => us.length && us[0].role !== 'superadmin');
         const b = Array.from(a).sort((a, b) =>
             a[0].name
                 .toLocaleLowerCase(locales)[0]
@@ -112,7 +112,7 @@ describe('testing function with users 2', () => {
     });
 
     test('returns array of arrays with all superadmins in the subarray at position -1', () => {
-        const a = eighth(users2);
+        const a = userList(users2);
         expect(a.at(-1)?.every((us) => us.role === 'superadmin'));
         const b = a.reduce(
             (acc, arr) => (arr.some((us) => us.role === 'superadmin') ? acc++ : acc),
@@ -123,14 +123,14 @@ describe('testing function with users 2', () => {
     });
 
     test('all arrays of users are sorted in order of descending id', () => {
-        const a = eighth(users2);
+        const a = userList(users2);
         const b = a.map((c) => (c = c.sort((k, l) => l.id! - k.id!)));
         expect(a).toStrictEqual(b);
         expect(a.length).toBeGreaterThanOrEqual(1);
     });
 
     test('last item in outer array is an empty array if no superadmins are in list', () => {
-        const a = eighth(users2);
+        const a = userList(users2);
         expect(a.at(-1)).toStrictEqual([]);
         expect(a.length).toBeGreaterThanOrEqual(1);
     });
@@ -138,12 +138,12 @@ describe('testing function with users 2', () => {
 
 describe('testing function with users 3', () => {
     test('returns array of arrays', () => {
-        const a = eighth(users3);
+        const a = userList(users3);
         expect(a).toHaveLength(4);
     });
 
     test('alphabetical sorting takes locale into account ', () => {
-        const a = eighth(users3).filter((us) => us[0].role !== 'superadmin');
+        const a = userList(users3).filter((us) => us[0].role !== 'superadmin');
         const b = Array.from(a).sort((a, b) =>
             a[0].name
                 .toLocaleLowerCase(locales)[0]
@@ -154,7 +154,7 @@ describe('testing function with users 3', () => {
     });
 
     test('returns array of arrays with all superadmins in the subarray at position -1', () => {
-        const a = eighth(users3);
+        const a = userList(users3);
         expect(a.at(-1)?.every((us) => us.role === 'superadmin'));
         const b = a.reduce(
             (acc, arr) => (arr.some((us) => us.role === 'superadmin') ? acc++ : acc),
@@ -165,7 +165,7 @@ describe('testing function with users 3', () => {
     });
 
     test('all arrays of users are sorted in order of descending id', () => {
-        const a = eighth(users3);
+        const a = userList(users3);
         const b = a.map((c) => (c = c.sort((k, l) => l.id! - k.id!)));
         expect(a).toStrictEqual(b);
         expect(a.length).toBeGreaterThanOrEqual(1);
@@ -174,12 +174,12 @@ describe('testing function with users 3', () => {
 
 describe('testing function with users 4 ( empty list )', () => {
     test('returns array of arrays', () => {
-        const a = eighth(users4);
+        const a = userList(users4);
         expect(a).toHaveLength(1);
     });
 
     test('alphabetical sorting takes locale into account ', () => {
-        const a = eighth(users4).filter((us) => us.length && us[0].role !== 'superadmin');
+        const a = userList(users4).filter((us) => us.length && us[0].role !== 'superadmin');
         const b = Array.from(a).sort((a, b) =>
             a[0].name
                 .toLocaleLowerCase(locales)[0]
@@ -189,7 +189,7 @@ describe('testing function with users 4 ( empty list )', () => {
     });
 
     test('returns array of arrays with all superadmins in the subarray at position -1', () => {
-        const a = eighth(users4);
+        const a = userList(users4);
         expect(a.at(-1)?.every((us) => us.role === 'superadmin'));
         const b = a.reduce(
             (acc, arr) => (arr.some((us) => us.role === 'superadmin') ? acc++ : acc),
@@ -200,7 +200,7 @@ describe('testing function with users 4 ( empty list )', () => {
     });
 
     test('all arrays of users are sorted in order of descending id', () => {
-        const a = eighth(users4);
+        const a = userList(users4);
         const b = a.map((c) => (c = c.sort((k, l) => l.id! - k.id!)));
         expect(a).toStrictEqual(b);
         expect(a.length).toBeGreaterThanOrEqual(1);
@@ -209,12 +209,12 @@ describe('testing function with users 4 ( empty list )', () => {
 
 describe('testing function with users 5 ( all superadmins )', () => {
     test('returns array of arrays', () => {
-        const a = eighth(users5);
+        const a = userList(users5);
         expect(a).toHaveLength(1);
     });
 
     test('returns array of arrays with all superadmins in the subarray at position -1', () => {
-        const a = eighth(users5);
+        const a = userList(users5);
         expect(a.at(-1)?.every((us) => us.role === 'superadmin'));
         const b = a.reduce(
             (acc, arr) => (arr.some((us) => us.role === 'superadmin') ? acc++ : acc),
@@ -225,7 +225,7 @@ describe('testing function with users 5 ( all superadmins )', () => {
     });
 
     test('all arrays of users are sorted in order of descending id', () => {
-        const a = eighth(users5);
+        const a = userList(users5);
         const b = a.map((c) => (c = c.sort((k, l) => l.id! - k.id!)));
         expect(a).toStrictEqual(b);
         expect(a.length).toBeGreaterThanOrEqual(1);

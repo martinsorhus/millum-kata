@@ -10,6 +10,6 @@
  *
  */
 
-export const seventh = (items: string[]) => {
+export const reverseAlphabet = (items: string[]) => {
     return items;
 };

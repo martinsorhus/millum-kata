@@ -11,7 +11,7 @@
  *
  */
 
-export const seventh = (items: string[]) => {
+export const reverseAlphabet = (items: string[]) => {
     return items.sort((a, b) => {
         const letterA = a[0];
         const letterB = b[0];

@@ -33,9 +33,9 @@
  * - Input can contain only superadmins
  */
 
-import { User } from '../../../../interfaces/user.interface';
+import { User } from '@interfaces';
 
-export const eighth = (users: User[]) => {
+export const userList = (users: User[]) => {
     const locales = ['nb-NO', 'da-DK', 'sv-SE'];
     let u: User[][] = [];
     const superAdmins: User[] = [];

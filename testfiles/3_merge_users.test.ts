@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { User } from '../interfaces/user.interface';
-import { third } from '../katas/3_merge_users';
+import { User } from '@interfaces';
+import { mergeUsers } from '@katas';
 
 const u1: User[] = [
     { name: 'Anders', role: 'regular', id: 1900 },
@@ -35,7 +35,7 @@ const u3: User[] = [
 ];
 
 test('Function returns merged array sorted correctly', () => {
-    expect(third(u1, u2)).toStrictEqual([
+    expect(mergeUsers(u1, u2)).toStrictEqual([
         { name: 'Anders', role: 'regular', id: 1900 },
         { name: 'Lisa', role: 'regular', id: 3109483 },
         { name: 'Vebjørn', role: 'regular', id: 2311 },
@@ -60,7 +60,7 @@ test('Function returns merged array sorted correctly', () => {
 });
 
 test('Return correctly merged array if input a is longer than input b', () => {
-    expect(third([...u1, ...u3], u2)).toStrictEqual([
+    expect(mergeUsers([...u1, ...u3], u2)).toStrictEqual([
         { name: 'Anders', role: 'regular', id: 1900 },
         { name: 'Lisa', role: 'regular', id: 3109483 },
         { name: 'Vebjørn', role: 'regular', id: 2311 },
@@ -84,7 +84,7 @@ test('Return correctly merged array if input a is longer than input b', () => {
     ]);
 });
 test('Return correctly merged array if input b is longer than input a', () => {
-    expect(third(u1, [...u2, ...u3])).toStrictEqual([
+    expect(mergeUsers(u1, [...u2, ...u3])).toStrictEqual([
         { name: 'Anders', role: 'regular', id: 1900 },
         { name: 'Lisa', role: 'regular', id: 3109483 },
         { name: 'Vebjørn', role: 'regular', id: 2311 },

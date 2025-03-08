@@ -1,9 +1,6 @@
-import { Stocktaking, PeriodType } from '../../../../models';
+import { Stocktaking, PeriodType } from '@models';
 
-export const fill_the_gaps = (
-    stocktakings: Stocktaking[],
-    periodType: PeriodType
-): Stocktaking[] => {
+export const fillGaps = (stocktakings: Stocktaking[], periodType: PeriodType): Stocktaking[] => {
     let MAX_PERIOD = 0;
     switch (periodType) {
         case PeriodType.WEEKLY:

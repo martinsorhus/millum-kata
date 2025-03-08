@@ -1,5 +1,5 @@
 import { expect, test } from '@jest/globals';
-import { seventh } from '../katas/7_reverse_alphabet';
+import { reverseAlphabet } from '@katas';
 
 const items = [
     'o90',
@@ -25,7 +25,7 @@ const items = [
 ];
 
 test('returns array in correct order', () => {
-    expect(seventh(items)).toStrictEqual([
+    expect(reverseAlphabet(items)).toStrictEqual([
         'w1',
         'w3',
         't4',

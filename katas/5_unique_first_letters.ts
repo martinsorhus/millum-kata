@@ -7,9 +7,9 @@
  *
  */
 
-import { User } from '../interfaces/user.interface';
+import { User } from '@interfaces';
 
-export const fifth = (users: User[]) => {
+export const uniqueFirstLetters = (users: User[]) => {
     let obj = {};
     return obj;
 };

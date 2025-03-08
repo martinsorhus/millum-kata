@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { User } from '../interfaces/user.interface';
-import { second } from '../katas/2_duplicate_ids';
+import { User } from '@interfaces';
+import { duplicateIds } from '@katas';
 
 const u1: User[] = [
     { name: 'Per', role: 'admin', id: 2090901 },
@@ -24,7 +24,7 @@ const u2: User[] = [
 ];
 
 test('Function returns correctly updated array', () => {
-    expect(second(u1, u2)).toStrictEqual([
+    expect(duplicateIds(u1, u2)).toStrictEqual([
         { name: 'Per', role: 'admin', id: 2090901 },
         { name: 'Ole', role: 'regular', id: 4556321 },
         { name: 'Bernt', role: 'regular', id: 900913 }, //
