@@ -7,8 +7,9 @@ import { usernameValue } from './6_username_value';
 import { reverseAlphabet } from './7_reverse_alphabet';
 import { userList } from './8_userlist';
 import { fillGaps } from './9_fill_gaps';
-import { checkVersion } from './10_version';
+import { greetings } from './10_greetings';
 import { letterCount } from './11_letter_count';
+import { checkVersion } from './12_version';
 
 export {
     filterUsers,
@@ -20,6 +21,7 @@ export {
     reverseAlphabet,
     userList,
     fillGaps,
-    checkVersion,
-    letterCount
+    greetings,
+    letterCount,
+    checkVersion
 };

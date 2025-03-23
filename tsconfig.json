@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": ".",
         "paths": {
-            "@testdata/*": ["testdata/*"],
-            "@models": ["models"],
-            "@katas": ["katas"],
-            "@interfaces": ["interfaces"],
-            "@types": ["types"]
+            "@testdata": ["testdata/index.ts"],
+            "@models": ["models/index.ts"],
+            "@katas": ["katas/index.ts"],
+            "@interfaces": ["interfaces/index.ts"],
+            "@types": ["types/index.ts"]
         }
     }
 }

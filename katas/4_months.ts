@@ -1,8 +1,4 @@
-import { User } from '@interfaces';
-
-interface ExtendedUser extends User {
-    birthdayMonth: string;
-}
+import { ExtendedUser } from '@interfaces';
 
 /**
  * Write a function that takes in an array of ExtendedUsers and returns an object with months as keys
