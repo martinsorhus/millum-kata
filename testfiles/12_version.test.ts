@@ -14,7 +14,7 @@ import {
     three_one_one_not__mandatory,
     four_one_threeHundredTwelve__mandatory,
     four_one_threeHundredTwelve_not__mandatory
-} from '@testdata/checkversion';
+} from '@testdata';
 
 const p: UpdateResponse[] = ['Mandatory', 'Available', 'Unavailable'];
 
