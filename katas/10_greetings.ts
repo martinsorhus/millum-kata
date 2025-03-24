@@ -8,6 +8,6 @@
         expect(b).toBe('Hello, James');
  */
 
-export const greetings = (name: string): Function => {
-    return () => name;
+export const greetings = (name: string) => {
+    return;
 };
